@@ -43,7 +43,8 @@
     "ghcr.io/devcontainers-extra/features/bun:1": {},
     "ghcr.io/iyaki/devcontainer-features/oh-my-pi:": {
       "version": "latest"
-    }
+    },
+    "ghcr.io/nkaaf/devcontainer-features/latex-texlive:0": {}
   },
   "customizations": {
     "vscode": {

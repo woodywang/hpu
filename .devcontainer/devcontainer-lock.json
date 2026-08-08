@@ -59,6 +59,19 @@
       "version": "1.0.0",
       "resolved": "ghcr.io/jsburckhardt/devcontainer-features/uv@sha256:542a0bc2203205b3c696de650ba862f280b20af3543493cc232edd9ac35791f7",
       "integrity": "sha256:542a0bc2203205b3c696de650ba862f280b20af3543493cc232edd9ac35791f7"
+    },
+    "ghcr.io/nkaaf/devcontainer-features/latex-texlive:0": {
+      "version": "0.1.1",
+      "resolved": "ghcr.io/nkaaf/devcontainer-features/latex-texlive@sha256:da6c40dba2d65a0588835ffdb60c42af0ccdf3998885280949e22ec0e72e4b74",
+      "integrity": "sha256:da6c40dba2d65a0588835ffdb60c42af0ccdf3998885280949e22ec0e72e4b74",
+      "dependsOn": [
+        "ghcr.io/nkaaf/devcontainer-features/package-manager:2"
+      ]
+    },
+    "ghcr.io/nkaaf/devcontainer-features/package-manager:2": {
+      "version": "2.0.0",
+      "resolved": "ghcr.io/nkaaf/devcontainer-features/package-manager@sha256:0c77ce7c7bd0fe0bba6a41ecfcec15ef24be2fcbc62f9e0d1169b0566df6ce0f",
+      "integrity": "sha256:0c77ce7c7bd0fe0bba6a41ecfcec15ef24be2fcbc62f9e0d1169b0566df6ce0f"
     }
   }
 }
