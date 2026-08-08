@@ -1,0 +1,80 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+  "name": "HPU",
+  "image": "mcr.microsoft.com/devcontainers/base:dev-ubuntu26.04",
+  "workspaceFolder": "/workspaces/hpu",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/hpu,type=bind,consistency=cached",
+
+  "containerEnv": {
+    "LANG": "en_US.UTF-8",
+    "LC_ALL": "en_US.UTF-8"
+  },
+
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.claude,target=/home/vscode/.claude,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.claude.json,target=/home/vscode/.claude.json,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.codex,target=/home/vscode/.codex,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.omp,target=/home/vscode/.omp,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.pi,target=/home/vscode/.pi,type=bind,consistency=cached"
+  ],
+
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/python:1": {},
+    "ghcr.io/jsburckhardt/devcontainer-features/uv:1": {},
+    "ghcr.io/devcontainers-extra/features/claude-code:2": {},
+    "ghcr.io/devcontainers-extra/features/npm-packages:1.0.1": {
+      "packages": "@openai/codex,opencode-ai"
+    },
+    "ghcr.io/devcontainers-extra/features/apt-packages:1": {
+      "packages": "git,git-flow,tree,ffmpeg"
+    },
+    "ghcr.io/devcontainers/features/java:1": {
+      "installMaven": true,
+      "version": "21"
+    },
+    "ghcr.io/devcontainers/features/go:1": {},
+    "ghcr.io/devcontainers-extra/features/bun:1": {},
+    "ghcr.io/iyaki/devcontainer-features/oh-my-pi:": {
+      "version": "latest"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Anthropic.claude-code",
+        "bierner.markdown-mermaid",
+        "openai.chatgpt",
+        "codezombiech.gitignore",
+        "redhat.vscode-xml",
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-pg",
+        "vmware.vscode-boot-dev-pack",
+        "eamodio.gitlens",
+        "ms-vscode.makefile-tools",
+        "vscjava.vscode-java-pack",
+        "mutantdino.resourcemonitor",
+        "kilocode.kilo-code",
+        "ms-vscode.vscode-typescript-next"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+          },
+          "zsh": {
+            "path": "zsh"
+          }
+        }
+      }
+    }
+  }
+}
