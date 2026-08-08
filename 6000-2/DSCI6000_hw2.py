@@ -1,6 +1,7 @@
 # Setup — run this cell first
 
 import math
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import stats
@@ -13,6 +14,17 @@ plt.rcParams.update({
     'axes.grid': True,
     'grid.alpha': 0.25,
 })
+
+# 图片输出目录（与 report.md 同级，报告以 figures/xxx.png 相对路径引用）
+FIG_DIR = 'figures'
+os.makedirs(FIG_DIR, exist_ok=True)
+
+def save_figure(filename):
+    """将当前图表保存到 FIG_DIR，供 report.md 以文件链接方式引用。"""
+
+    path = os.path.join(FIG_DIR, filename)
+    plt.savefig(path, dpi=100)
+    print(f'  [figure saved] {path}')
 
 print('Setup complete.')
 
@@ -88,6 +100,7 @@ ax.set_ylabel('Density')                # 设置y轴标签
 ax.set_title('Prior PDF of CTR (θ) with Mean and 95% Probability Interval')    # 设置图表标题
 ax.legend(fontsize=11)                  # 展示图例说明所有元素
 plt.tight_layout()                      # 设置图表布局
+save_figure('fig1_prior_pdf.png')       # 保存图片供报告引用
 plt.show()                              # 显示图表
 
 # 绘制先验概率密度函数曲线图 completed
@@ -138,6 +151,7 @@ ax.set_ylabel('Likelihood  L(θ) = P(z=18 | n=200, θ)')
 ax.set_title('Binomial Likelihood of 18 Clicks out of 200 Impressions')
 ax.legend(fontsize=11)
 plt.tight_layout()
+save_figure('fig2_likelihood.png')      # 保存图片供报告引用
 plt.show()
 
 # 绘制二项似然函数曲线图 completed
@@ -220,8 +234,9 @@ ax.text(0.52, 0.45, '\n'.join([
         f'Posterior Mean = {post_mean:.2%}']),
         transform=ax.transAxes, fontsize=9.5, color='red', ha='left', va='top')
 
-plt.tight_layout()                  # 设置图表布局
-plt.show()                          # 显示图表
+plt.tight_layout()                          # 设置图表布局
+save_figure('fig3_prior_vs_posterior.png')  # 保存图片供报告引用
+plt.show()                                  # 显示图表
 
 # 绘制先验贝塔分布与后验贝塔分布的比较图 completed
 
