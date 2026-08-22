@@ -1,0 +1,6 @@
+product_id,product_name,category,cost_price,retail_price
+101,Wireless Headphones,Electronics,45.00,89.99
+102,Bluetooth Speaker,Electronics,20.00,49.99
+103,Office Chair,Furniture,60.00,129.99
+104,Laptop Charger,Electronics,15.00,34.99
+105,Desk Lamp,Furniture,25.00,59.99
