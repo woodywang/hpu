@@ -16,3 +16,9 @@ __pycache__/
 *.fdb_latexmk
 *.listing
 *.synctex.gz
+
+# 6000-3 原始数据集（xlsx 23MB / csv 45MB，体积过大不入库）
+# 代码优先通过 ucimlrepo 在线获取，本地文件仅作离线备用
+6000-3/Online Retail.xlsx
+6000-3/Online_Retail.xlsx
+6000-3/Online_Retail.csv
