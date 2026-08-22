@@ -1,0 +1,6 @@
+order_id,customer_id,category,amount,order_date
+1,101,Electronics,500,2025-01-10
+2,102,Apparel,100,2025-01-12
+3,101,Electronics,300,2025-01-15
+4,103,Apparel,150,2025-01-18
+5,104,Electronics,800,2025-01-20
